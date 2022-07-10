@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "dev.muriloaraujo";
+option java_outer_classname = "TuringAuth";
+option objc_class_prefix = "HLW";
+
+package dev.muriloaraujo;
+
+service TuringAuthService {
+  rpc send (TuringAuthRequest) returns (TuringAuthReply) {}
+}
+
+message TuringAuthRequest {
+  string name = 1;
+}
+
+message TuringAuthReply {
+  string message = 1;
+}
